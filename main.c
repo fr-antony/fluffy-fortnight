@@ -40,7 +40,9 @@ int main(void)
             printf("Choix 5");
             break;
         default:
-            printf("Choix invalide");
+            printf("Arrêt de Fluffy-fortnight");
+            return EXIT_SUCCESS;
+            break;
     };
     return EXIT_SUCCESS;
 }
