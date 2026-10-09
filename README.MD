@@ -4,6 +4,15 @@
 ```shell
 gcc main.c -o main -Wall -Werror -std=c99 -fstack-protector && ./main
 ```
+```shell
+make
+```
+```shell
+make run
+```
+```shell
+make clear
+```
 
 ## Mise en situation
 Le SVG est un format graphique qui représente des formes via des vecteurs pour assurer qu'il n'y a pas de perte de résolution. Un SVG est un plan en 2 dimensions sur lequel on peut venir y dessiner des formes ou des trajectoires. Un SVG est composé de deux éléments :
