@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "src/menu.h"
+#include "src/menu/menu.h"
 
 int main()
 {
