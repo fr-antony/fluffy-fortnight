@@ -2,7 +2,7 @@ CC      = gcc
 CFLAGS  = -Wall -Werror -std=c99 -fstack-protector -Isrc
 TARGET  = main
 
-SRCS    = main.c $(wildcard src/*.c)
+SRCS    = main.c $(wildcard src/*/*.c)
 OBJS    = $(SRCS:.c=.o)
 
 all: $(TARGET)
