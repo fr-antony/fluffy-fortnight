@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
+#include "../creation/creation.h"
 
 void menu()
 {
@@ -14,19 +15,20 @@ void menu()
     switch (choix)
     {
         case 1:
-            printf("Choix 1\n");
+            printf("Lancement du programme de creation\n\n");
+            creation();
             break;
         case 2:
-            printf("Choix 2\n");
+            printf("Lancement du programme d'edition\n\n");
             break;
         case 3:
-            printf("Choix 3\n");
+            printf("Lancement du programme de sauvegarde\n\n");
             break;
         case 4:
-            printf("Choix 4\n");
+            printf("Lancement du programme de chargement\n\n");
             break;
         case 5:
-            printf("Choix 5\n");
+            printf("Lancement du programme de visualisation\n\n");
             break;
         default:
             printf("Arrêt de Fluffy-fortnight\n");
