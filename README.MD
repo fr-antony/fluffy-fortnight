@@ -41,6 +41,11 @@ Vous trouverez à ce lien https://developer.mozilla.org/fr/docs/Web/SVG/Referenc
 - Vous commenterez votre code au format javadoc.
 
 ## A faire
-- [ ] Faire le makefile
+- [x] Faire le makefile
+- [ ] Création de fichier
+- [ ] Sauvegarde de fichier
+- [ ] Chargement d'ancien fichier
+- [ ] Visionneuse de fichier
+- [ ] Editeur de fichier
 
 ## Présentation du projet 
