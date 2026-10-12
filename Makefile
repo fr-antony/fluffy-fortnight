@@ -6,6 +6,7 @@ SRCS    = main.c $(wildcard src/*/*.c)
 OBJS    = $(SRCS:.c=.o)
 
 all: $(TARGET)
+	./$(TARGET)
 
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
@@ -14,7 +15,6 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
 build: $(TARGET)
-	./$(TARGET)
 
 clean:
 	rm -f $(OBJS) $(OBJS:.o=.d) $(TARGET)
