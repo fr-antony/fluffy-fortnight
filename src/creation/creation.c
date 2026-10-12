@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "creation.h"
+#include "../formes/formes.h"
 
 void creation()
 {
@@ -15,7 +16,7 @@ void creation()
     switch (choix)
     {
         case 1:
-            printf("Choix 1\n");
+            formes(choix);
             break;
         case 2:
             printf("Choix 2\n");
