@@ -1,15 +1,19 @@
 # C Project
 
-## Commandes pour compiler
+## Utilisation
+Compilation et lancement
 ```shell
 gcc main.c -o main -Wall -Werror -std=c99 -fstack-protector && ./main
 ```
+Compilation et lancement via Makefile
 ```shell
 make
 ```
+Compilation
 ```shell
-make run
+make build
 ```
+Nettoyage des fichiers cache
 ```shell
 make clear
 ```
