@@ -54,5 +54,34 @@ typedef struct rectangle
 
 void formes(int choix)
 {
+    char filename[15];
     printf("%d\n", choix);
+    switch (choix)
+    {
+        case 1:
+            printf("Nom du fichier (15 char. max.) : ");
+            scanf("%s", filename);
+            FILE* file = fopen(filename, "w");
+            fprintf(file, "Nouveau contenu");
+            fclose(file);
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+        case 7:
+            break;
+        case 8:
+            break;
+        case 9:
+            break;
+        default:
+            break;
+    }
 }
