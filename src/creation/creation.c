@@ -4,22 +4,45 @@
 
 void creation()
 {
+    int choix;
+
     printf("Création de votre fichier SVG\n");
+    printf("Que souhaitez-vous faire ?\n\n");
+    printf("1. Carré\n2. Cercle\n3. Chemin\n4. Ellipse\n5. Groupe\n6. Ligne\n7. Polygones\n8. Polylignes\n9. Rectangle\n\n");
+    printf("Choisissez une option (1-9): ");
+    scanf("%d", &choix);
 
-    char *svg =
-        "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"400\" height=\"400\" viewBox=\"0 0 124 124\" fill=\"none\">\n"
-        "    <rect width=\"124\" height=\"124\" rx=\"24\" fill=\"#F97316\"/>\n"
-        "    <path d=\"M19.375 36.7818V100.625C19.375 102.834 21.1659 104.625 23.375 104.625H87.2181C90.7818 104.625 92.5664 100.316 90.0466 97.7966L26.2034 33.9534C23.6836 31.4336 19.375 33.2182 19.375 36.7818Z\" fill=\"white\"/>\n"
-        "    <circle cx=\"63.2109\" cy=\"37.5391\" r=\"18.1641\" fill=\"black\"/>\n"
-        "    <rect opacity=\"0.4\" x=\"81.1328\" y=\"80.7198\" width=\"17.5687\" height=\"17.3876\" rx=\"4\" transform=\"rotate(-45 81.1328 80.7198)\" fill=\"#FDBA74\"/>\n"
-        "</svg>\n";
-
-    FILE *fichier;
-
-    fichier = fopen("test.svg", "w");
-
-    fputs(svg, fichier);
-    
-    fclose(fichier);
-    printf("Fichier créer\n");
+    switch (choix)
+    {
+        case 1:
+            printf("Choix 1\n");
+            break;
+        case 2:
+            printf("Choix 2\n");
+            break;
+        case 3:
+            printf("Choix 3\n");
+            break;
+        case 4:
+            printf("Choix 4\n");
+            break;
+        case 5:
+            printf("Choix 5\n");
+            break;
+        case 6:
+            printf("Choix 6\n");
+            break;
+        case 7:
+            printf("Choix 7\n");
+            break;
+        case 8:
+            printf("Choix 8\n");
+            break;
+        case 9:
+            printf("Choix 9\n");
+            break;
+        default:
+            printf("Choix défault\n");
+            break;
+    }
 }
