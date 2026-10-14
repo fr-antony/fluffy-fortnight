@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "creation.h"
 #include "../formes/formes.h"
+#include "../../main.h"
 
 void creation()
 {
@@ -13,37 +14,12 @@ void creation()
     printf("Choisissez une option (1-9): ");
     scanf("%d", &choix);
 
-    switch (choix)
+    if(choix >= 1 && choix <= 9)
     {
-        case 1:
-            formes(choix);
-            break;
-        case 2:
-            printf("Choix 2\n");
-            break;
-        case 3:
-            printf("Choix 3\n");
-            break;
-        case 4:
-            printf("Choix 4\n");
-            break;
-        case 5:
-            printf("Choix 5\n");
-            break;
-        case 6:
-            printf("Choix 6\n");
-            break;
-        case 7:
-            printf("Choix 7\n");
-            break;
-        case 8:
-            printf("Choix 8\n");
-            break;
-        case 9:
-            printf("Choix 9\n");
-            break;
-        default:
-            printf("Choix défault\n");
-            break;
+        formes(choix);
+    }
+    else
+    {
+        main();
     }
 }

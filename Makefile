@@ -1,5 +1,6 @@
 CC      = gcc
 CFLAGS  = -Wall -Werror -std=c99 -fstack-protector -Isrc
+LDLIBS  = -lm
 TARGET  = main
 
 SRCS    = main.c $(wildcard src/*/*.c)
@@ -9,7 +10,7 @@ all: $(TARGET)
 	./$(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
@@ -21,4 +22,4 @@ clean:
 
 -include $(OBJS:.o=.d)
 
-.PHONY: all run clean
+.PHONY: all build clean
