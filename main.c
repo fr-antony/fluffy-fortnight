@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "src/menu/menu.h"
+#include "navigation/navigation_accueil.h"
 
 int main()
 {
-    menu();
+    navigation_accueil();
 }

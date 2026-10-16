@@ -1,0 +1,5 @@
+#ifndef DEMANDE_ENTIER_BORNE
+    #define DEMANDE_ENTIER_BORNE
+
+    int demande_entier_borne();
+#endif

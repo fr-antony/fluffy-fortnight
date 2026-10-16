@@ -17,7 +17,7 @@ $(TARGET): $(OBJS)
 
 build: $(TARGET)
 
-clean:
+clear:
 	rm -f $(OBJS) $(OBJS:.o=.d) $(TARGET)
 
 -include $(OBJS:.o=.d)
