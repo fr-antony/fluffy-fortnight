@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int demande_entier()
 {
-    int number;
+    int nombre;
 
-    printf("Entrer un entier: ");
-    scanf("%d", &number);
-    
-    return number;
+    printf("Entrer un entier : ");
+
+    scanf("%d", &nombre);
+
+    return nombre;
 }

@@ -54,3 +54,4 @@ dkms.conf
 # Exécutable du projet
 /main
 *.svg
+/srcold/*

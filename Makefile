@@ -3,7 +3,7 @@ CFLAGS  = -Wall -Werror -std=c99 -fstack-protector -Isrc
 LDLIBS  = -lm
 TARGET  = main
 
-SRCS    = main.c $(wildcard src/*/*.c)
+SRCS    = main.c $(wildcard src/*/*.c src/*/*/*.c)
 OBJS    = $(SRCS:.c=.o)
 
 all: $(TARGET)
@@ -17,9 +17,11 @@ $(TARGET): $(OBJS)
 
 build: $(TARGET)
 
-clear:
+clean:
 	rm -f $(OBJS) $(OBJS:.o=.d) $(TARGET)
+
+clear: clean
 
 -include $(OBJS:.o=.d)
 
-.PHONY: all build clean
+.PHONY: all build clear clean

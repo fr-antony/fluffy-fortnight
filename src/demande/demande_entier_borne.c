@@ -1,16 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int demande_entier_borne(int min, int max)
 {
-    int number;
+    int nombre;
 
     do
     {
-        printf("Entrer un entier (%d - %d): ", min, max);
-        scanf("%d", &number);
-    }
-    while(number < min || number > max);
+        printf("Entrer un entier (%d - %d) : ", min, max);
 
-    return number;
+        scanf("%d", &nombre);
+
+        if (nombre < min || nombre > max)
+        {
+            printf("Le nombre est hors de l'intervalle.\n");
+        }
+    } while (nombre < min || nombre > max);
+
+    return nombre;
 }

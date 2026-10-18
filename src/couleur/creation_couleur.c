@@ -1,11 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "creation_couleur.h"
 #include "../demande/demande_entier_borne.h"
 
-void creation_couleur()
+char* creation_couleur()
 {
-    int r = demande_entier_borne(0,255);
-    int g = demande_entier_borne(0,255);
-    int b = demande_entier_borne(0,255);
-    printf("rgb(%d %d %d)", r, g, b);
+    char *couleur;
+    int rouge;
+    int vert;
+    int bleu;
+
+    printf("Intensite rouge :\n");
+    rouge = demande_entier_borne(0, 255);
+
+    printf("Intensite verte :\n");
+    vert = demande_entier_borne(0, 255);
+
+    printf("Intensite bleue :\n");
+    bleu = demande_entier_borne(0, 255);
+
+    couleur = malloc(32);
+
+    sprintf(couleur, "rgb(%d, %d, %d)", rouge, vert, bleu);
+
+    return couleur;
 }

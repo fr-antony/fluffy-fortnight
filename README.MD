@@ -1,10 +1,6 @@
 # C Project
 
 ## Utilisation
-Compilation et lancement
-```shell
-gcc main.c -o main -Wall -Werror -std=c99 -fstack-protector && ./main
-```
 Compilation et lancement via Makefile
 ```shell
 make
@@ -15,8 +11,13 @@ make build
 ```
 Nettoyage des fichiers cache
 ```shell
-make clear
+make clean
 ```
+
+La creation d'un fichier SVG est accessible depuis le menu principal. Le carre
+est actuellement la seule forme disponible : choisissez-le, indiquez un nom de
+fichier (avec l'extension `.svg`), puis sa couleur RGB, sa position et la
+longueur de son cote.
 
 ## Mise en situation
 Le SVG est un format graphique qui représente des formes via des vecteurs pour assurer qu'il n'y a pas de perte de résolution. Un SVG est un plan en 2 dimensions sur lequel on peut venir y dessiner des formes ou des trajectoires. Un SVG est composé de deux éléments :

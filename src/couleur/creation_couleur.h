@@ -1,5 +1,5 @@
 #ifndef CREATION_COULEUR
     #define CREATION_COULEUR
-
-    void creation_couleur();
+    
+    char* creation_couleur(void);
 #endif

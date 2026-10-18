@@ -1,5 +1,5 @@
 #ifndef DEMANDE_ENTIER_BORNE
     #define DEMANDE_ENTIER_BORNE
 
-    int demande_entier_borne();
+    int demande_entier_borne(int min, int max);
 #endif
