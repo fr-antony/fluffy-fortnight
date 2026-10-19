@@ -1,7 +1,11 @@
 #include <stdlib.h>
-#include "clearscreen.h"
 
-void clearScreen() {
+#include "clear_screen.h"
+
+/**
+ * @brief Clears the terminal screen
+ */
+void clear_screen() {
     #ifdef _WIN32
         system("cls");
     #else

@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "creation_couleur.h"
 #include "../demande/demande_entier_borne.h"
+#include "creation_couleur.h"
 
+/**
+ * @brief Creates a new color in RGB format
+ * @return char* The color string in RGB format
+ */
 char* creation_couleur()
 {
     char *couleur;
@@ -11,14 +15,11 @@ char* creation_couleur()
     int vert;
     int bleu;
 
-    printf("Intensite rouge :\n");
-    rouge = demande_entier_borne(0, 255);
+    rouge = demande_entier_borne("Intensite rouge", 0, 255);
 
-    printf("Intensite verte :\n");
-    vert = demande_entier_borne(0, 255);
+    vert = demande_entier_borne("Intensite verte", 0, 255);
 
-    printf("Intensite bleue :\n");
-    bleu = demande_entier_borne(0, 255);
+    bleu = demande_entier_borne("Intensite bleue", 0, 255);
 
     couleur = malloc(32);
 

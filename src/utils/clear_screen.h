@@ -1,5 +1,5 @@
 #ifndef UTILS
     #define UTILS
 
-    void clearScreen();
+    void clear_screen();
 #endif

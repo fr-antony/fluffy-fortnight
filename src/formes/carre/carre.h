@@ -1,5 +1,5 @@
-#ifndef CARRE_H
-    #define CARRE_H
+#ifndef CARRE
+    #define CARRE
 
-    void formes_carre(FILE* fichier, const char* couleur, int x, int y, int cote);
+    void formes_carre();
 #endif
