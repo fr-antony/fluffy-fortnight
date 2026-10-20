@@ -3,36 +3,22 @@
 #include <stdio.h>
 #include <time.h>
 
-
-void slow_printf(char* message, int vitesse)
+/**
+ * @brief Prints a message character by character with a delay
+ * @param message The message to print
+ */
+void slow_printf(char* message)
 {
-    struct timespec slent = {
+    struct timespec delai = {
         .tv_sec = 0,
         .tv_nsec = 20000000L
     };
 
-    struct timespec srapide = {
-        .tv_sec = 0,
-        .tv_nsec = 10000000L
-    };
-
     setvbuf(stdout, NULL, _IONBF, 0);
 
-    if( vitesse == 1 )
+    for (size_t i = 0; message[i]; i++)
     {
-        for (size_t i = 0; message[i]; i++)
-        {
-            printf("%c", message[i]);
-            nanosleep(&slent, NULL);
-        }
+        printf("%c", message[i]);
+        nanosleep(&delai, NULL);
     }
-    else{
-        for (size_t i = 0; message[i]; i++)
-        {
-            printf("%c", message[i]);
-            nanosleep(&srapide, NULL);
-        }
-    }
-
-    printf("\n");
 }

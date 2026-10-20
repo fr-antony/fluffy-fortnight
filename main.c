@@ -1,22 +1,21 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-
 #include "navigation/navigation_accueil.h"
 #include "utils/clear_screen.h"
 #include "utils/slow_printf.h"
 
 /**
- * @brief main function of the program
- * @return int
+ * @brief The main function of the program
+ * @return The exit status of the program
  */
 int main()
 {
     clear_screen();
-    slow_printf("Compilation...", 1);
-    slow_printf("Création de bugs runtime...", 1);
-    slow_printf("Démarrage du programme", 1);
+    slow_printf("Compilation...\n");
+    slow_printf("Création de bugs runtime...\n");
+    slow_printf("Démarrage du programme\n");
     sleep(1);
-    clear_screen();
     navigation_accueil();
+    return 0;
 }

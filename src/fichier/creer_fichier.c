@@ -1,12 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-#include "../formes/carre/carre.h"
 #include "../formes/rectangle/rectangle.h"
 #include "../couleur/creation_couleur.h"
 #include "../utils/clear_screen.h"
 #include "../demande/demande_entier_borne.h"
 #include "../utils/slow_printf.h"
+#include "../utils/leave.h"
+#include "../formes/cercle/cercle.h"
+#include "../formes/ellipse/ellipse.h"
 
 /**
  * @brief Creates a new SVG file with a shape
@@ -19,9 +20,10 @@ void creer_fichier()
 
     clear_screen();
 
-    slow_printf("Menu de création\n", 1);
+    slow_printf("Menu de création\n\n");
+    slow_printf("1. Cercle\n2. Ellipse\n3. Rectangle / Carré\n4. Ligne (non disponible)\n5. Enchainement de lignes (non disponible)\n6. Polygone (non disponible)\n7. Trajectoire (non disponible)\n");
 
-    choix = demande_entier_borne("1. Carre\n2. Cercle (non disponible)\n3. Ellipse (non disponible)\n4. Rectangle\n5. Ligne (non disponible)\n6. Enchainement de lignes (non disponible)\n7. Polygone (non disponible)\n8. Trajectoire (non disponible)\n", 1, 8);
+    choix = demande_entier_borne("", 1, 7);
 
     printf("\nNom du fichier SVG a creer (ex. dessin.svg) : ");
     scanf("%255s", nom_fichier);
@@ -33,28 +35,28 @@ void creer_fichier()
     switch (choix)
     {
         case 1:
-            formes_carre(fichier);
+            formes_cercle(fichier);
             break;
         case 2:
-            // Cercle
+            formes_ellipse(fichier);
             break;
         case 3:
-            // Ellipse
-            break;
-        case 4:
             formes_rectangle(fichier);
             break;
-        case 5:
+        case 4:
             // Ligne
             break;
-        case 6:
+        case 5:
             // Enchainement
             break;
-        case 7:
+        case 6:
             // Polygone
             break;
-        case 8:
+        case 7:
             // Trajectoire
+            break;
+        default:
+            leave();
             break;
     }
 

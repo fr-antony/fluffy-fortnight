@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "../demande/demande_entier_borne.h"
 #include "creation_couleur.h"
 
 /**
- * @brief Creates a new color in RGB format
- * @return char* The color string in RGB format
+ * @brief Creates a color in RGB format
+ * @return char* The color in RGB format
  */
 char* creation_couleur()
 {

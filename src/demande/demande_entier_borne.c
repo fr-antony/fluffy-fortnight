@@ -1,12 +1,12 @@
 #include <stdio.h>
-
 #include "../utils/slow_printf.h"
 
 /**
  * @brief Asks the user to enter an integer within a specified range
- * @param min The minimum value of the range
- * @param max The maximum value of the range
- * @return int The integer entered by the user
+ * @param message The message to display
+ * @param min The minimum value (inclusive)
+ * @param max The maximum value (inclusive)
+ * @return int The entered integer
  */
 int demande_entier_borne(char* message, int min, int max)
 {
@@ -14,7 +14,7 @@ int demande_entier_borne(char* message, int min, int max)
     
     do
     {
-        printf("%s (%d - %d) : ", message, min, max);
+        printf("%s(%d - %d) : ", message, min, max);
         
         scanf("%d", &nombre);
         
