@@ -5,6 +5,9 @@
 #include "../utils/slow_printf.h"
 #include "../utils/dog.h"
 
+/**
+ * @brief Exits the program gracefully
+ */
 void leave()
 {
     clear_screen();

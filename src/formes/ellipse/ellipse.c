@@ -4,6 +4,10 @@
 #include "../../couleur/creation_couleur.h"
 #include "../../demande/demande_entier_borne.h"
 
+/**
+ * @brief Creates an ellipse in the SVG file
+ * @param fichier The SVG file to write to
+ */
 void formes_ellipse(FILE* fichier)
 {
     clear_screen();

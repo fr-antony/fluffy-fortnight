@@ -6,11 +6,14 @@
 #include "../utils/clear_screen.h"
 #include "../navigation/navigation_accueil.h"
 
+/**
+ * @brief Displays a tutorial for creating shapes in the SVG file
+ */
 void tutoriel_creation()
 {
     clear_screen();
-    slow_printf("Menu de création\n\n");
-    slow_printf("1. Cercle\n2. Ellipse (non disponible)\n3. Rectangle / Carré\n4. Ligne (non disponible)\n5. Enchainement de lignes (non disponible)\n6. Polygone (non disponible)\n7. Trajectoire (non disponible)\n");
+    slow_printf("Tutoriel de création\n\n");
+    slow_printf("1. Cercle\n2. Ellipse\n3. Rectangle / Carré\n4. Ligne (non disponible)\n5. Enchainement de lignes (non disponible)\n6. Polygone (non disponible)\n7. Trajectoire (non disponible)\n");
     slow_printf("(1 - 7) :");
     sleep(1);
     slow_printf(" 1\n\n");
@@ -43,7 +46,8 @@ void tutoriel_creation()
     slow_printf("\rLargeur du cercle (1 - 1000) : ");
     slow_printf("254\n\n");
     
-    slow_printf("Félicitations vous avez créer votre forme");
+    slow_printf("Félicitations vous avez créer votre forme\n\n");
+    slow_printf("Appuyer sur entrer pour continuer...");
     getchar();
     getchar();
 

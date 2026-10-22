@@ -4,8 +4,8 @@
 #include "creation_couleur.h"
 
 /**
- * @brief Creates a color in RGB format
- * @return char* The color in RGB format
+ * @brief Creates a color in RGB format based on user input
+ * @return char* The color in RGB format (e.g., "rgb(255, 0, 0)")
  */
 char* creation_couleur()
 {

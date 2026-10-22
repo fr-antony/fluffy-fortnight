@@ -12,7 +12,7 @@
 int main()
 {
     clear_screen();
-    slow_printf("Compilation...\n");
+    slow_printf("Suppression de seg fault...\n");
     slow_printf("Création de bugs runtime...\n");
     slow_printf("Démarrage du programme\n");
     sleep(1);

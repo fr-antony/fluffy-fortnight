@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "../formes/cercle/cercle.h"
 #include "../formes/rectangle/rectangle.h"
+#include "../formes/ellipse/ellipse.h"
 #include "../couleur/creation_couleur.h"
 #include "../utils/clear_screen.h"
 #include "../demande/demande_entier_borne.h"
 #include "../utils/slow_printf.h"
+#include "../navigation/navigation_accueil.h"
 
 /**
  * @brief Modifies an existing SVG file
@@ -16,18 +19,17 @@ void modifier_fichier()
     char fichier[32];
 
     clear_screen();
-    slow_printf("Menu d'édition\n");
-    slow_printf("Entrer le nom du fichier (ex. icon.svg)");
+    slow_printf("Menu d'édition\n\n");
+    slow_printf("Entrer le nom du fichier (ex. dessin.svg) : ");
     scanf("%31s", fichier);
 
-    FILE* fichier_svg = fopen(fichier, "r");
-    FILE* fichier_sortie = fopen("temp.svg", "w");
+    FILE *fichier_svg = fopen(fichier, "r");
+    FILE *fichier_sortie = fopen("temp.svg", "w");
 
     char ligne_actual[256];
     int ligne = 0;
 
     clear_screen();
-    slow_printf("Modification du fichier SVG\n");
 
     while (fgets(ligne_actual, sizeof(ligne_actual), fichier_svg) != NULL)
     {
@@ -48,12 +50,7 @@ void modifier_fichier()
             else if (strstr(ligne_actual, "<ellipse"))
             {
                 printf("\nLigne %d contient une ellipse.\n", ligne);
-                
-            }
-            else if (strstr(ligne_actual, "<line"))
-            {
-                printf("\nLigne %d contient une ligne.\n", ligne);
-                
+                formes_ellipse(fichier_sortie);
             }
         }
         else
@@ -64,6 +61,12 @@ void modifier_fichier()
 
     fclose(fichier_svg);
     fclose(fichier_sortie);
+    remove(fichier);
+    rename("temp.svg", fichier);
 
-    printf("\nLe fichier SVG a ete modifie:\n%s\n", fichier);
+    printf("\nLe fichier SVG a ete modifie : %s", fichier);
+    sleep(1);
+
+    clear_screen();
+    navigation_accueil();
 }
