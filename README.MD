@@ -1,56 +1,78 @@
-# C Project
+# C SVG Generator (`fluffy-fortnight`)
+
+Une bibliothèque et un outil en langage C conçus pour créer, éditer et manipuler des fichiers vectoriels SVG (`.svg`).
+
+## À propos
+
+**Fluffy Fortnight** est un projet réalisé dans le cadre de la formation chez Coda_. L'objectif principal est de manipuler la mémoire, les structures de données et la gestion des fichiers en C à travers la génération dynamique de fichiers image au format SVG (Scalable Vector Graphics).
+
+## Fonctionnalités
+
+- 🔹 **Création de fichiers SVG** : génération de formes de base (rectangles, cercles, lignes, polygones) et gestion des couleurs/styles.
+- 🔹 **Édition** : modification des attributs des éléments existants dans une structure SVG en mémoire.
+- 🔹 **Suppression** : nettoyage ou retrait de formes spécifiques avant l'exportation.
+- 🔹 **Tutoriel intégré** : mode guidé ou exemples d'utilisation pour apprendre à manipuler l'outil rapidement.
+
+## Technologies utilisées
+
+- **Langage** : C99
+- **Compilateur** : `GCC`
+- **Build System** : `Make`
+
+## Prérequis
+
+Avant de compiler le projet, assurez-vous de disposer des outils suivants sur votre système :
+
+- `git` pour récupérer le dépôt
+- Le compilateur C `gcc`
+- L'utilitaire `make`
+
+## Installation
+
+1. Cloner le dépôt :
+
+   ```bash
+   git clone https://github.com/fr-antony/fluffy-fortnight.git
+   cd fluffy-fortnight
+   ```
+
+2. Compiler le projet :
+
+   ```bash
+   make
+   ```
+
+3. Nettoyer les fichiers de compilation (optionnel) :
+
+   ```bash
+   make clean
+   ```
 
 ## Utilisation
-Compilation et lancement via Makefile
-```shell
-make
-```
-Compilation
-```shell
-make build
-```
-Nettoyage des fichiers cache
-```shell
-make clean
+
+Lancer l'exécutable généré pour démarrer le programme :
+
+```bash
+./main
 ```
 
-La creation d'un fichier SVG est accessible depuis le menu principal. Le carre
-est actuellement la seule forme disponible : choisissez-le, indiquez un nom de
-fichier (avec l'extension `.svg`), puis sa couleur RGB, sa position et la
-longueur de son cote.
+> Ajustez le nom de l'exécutable selon la cible définie dans votre `Makefile`.
 
-## Mise en situation
-Le SVG est un format graphique qui représente des formes via des vecteurs pour assurer qu'il n'y a pas de perte de résolution. Un SVG est un plan en 2 dimensions sur lequel on peut venir y dessiner des formes ou des trajectoires. Un SVG est composé de deux éléments :
-- Un « viewport » : Il s'agit d'une fenêtre sur le plan en deux dimensions. Seuls les éléments visibles dans cette fenêtre sont dessinés.
-- D'une liste d'éléments graphiques qui peuvent être stylisés.
+## Contribution
 
-Vous êtes chargé de développer une interface par ligne de commande pour créer, éditer, sauver, charger et visualiser des structures graphiques similaires au format SVG. Je précise ici que vous êtes libre d'adapter le format SVG tant que vous respectez le principe. Seules les formes suivantes sont nécessaires pour ce projet :
-- Les cercles
-- Les ellipses
-- Les carrés
-- Les rectangles
-- Les lignes
-- Les enchainements de lignes
-- Les polygones
-- Les trajectoires ("chemins")
-- Les groupes
-Vous trouverez à ce lien https://developer.mozilla.org/fr/docs/Web/SVG/Reference/Element/svg les détails de chaque forme. 
+Les contributions sont les bienvenues !
 
-## Consignes
-- Vous utiliserez le compiler GCC.
-- Vous utiliserez la version C99 (rappel de compilation : gcc -std=c99).
-- Vous écrirez un fichier Makefile pour compiler et nettoyer votre projet à l'aide des commandes make build et make clean.
-- Vous écrirez un fichier README.md pour présenter votre projet.
-- Les librairies natives sont autorisées (ex: stdbools, stdlib, stdio, etc ...). Les autres librairies ne sont pas autorisées. En cas de doute sur une librairie je vous invite fortement à venir me le demander.
-- La génération de code à l'aide d'IA(s) (GPT, Mistral, Copilot, Cursor, ...) n'est pas recommandée.
-- Vous commenterez votre code au format javadoc.
-
-## A faire
-- [x] Faire le makefile
-- [ ] Création de fichier
-- [ ] Sauvegarde de fichier
-- [ ] Chargement d'ancien fichier
-- [ ] Visionneuse de fichier
-- [ ] Editeur de fichier
-
-## Présentation du projet 
+1. Forkez le projet.
+2. Créez une branche pour votre fonctionnalité :
+   ```bash
+   git checkout -b feature/NouvelleFonctionnalite
+   ```
+3. Commitez vos changements :
+   ```bash
+   git commit -m "Ajout d'une nouvelle forme SVG"
+   ```
+4. Pushez vers votre branche :
+   ```bash
+   git push origin feature/NouvelleFonctionnalite
+   ```
+5. Ouvrez une Pull Request.

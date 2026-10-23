@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include "../formes/cercle/cercle.h"
 #include "../formes/rectangle/rectangle.h"
+#include "../formes/ligne/ligne.h"
 #include "../formes/ellipse/ellipse.h"
 #include "../couleur/creation_couleur.h"
 #include "../utils/clear_screen.h"
@@ -26,36 +27,41 @@ void modifier_fichier()
     FILE *fichier_svg = fopen(fichier, "r");
     FILE *fichier_sortie = fopen("temp.svg", "w");
 
-    char ligne_actual[256];
+    char ligne_actuelle[256];
     int ligne = 0;
 
     clear_screen();
 
-    while (fgets(ligne_actual, sizeof(ligne_actual), fichier_svg) != NULL)
+    while (fgets(ligne_actuelle, sizeof(ligne_actuelle), fichier_svg) != NULL)
     {
-        if (strstr(ligne_actual, "<rect") || strstr(ligne_actual, "<circle") || strstr(ligne_actual, "<ellipse") || strstr(ligne_actual, "<line"))
+        if (strstr(ligne_actuelle, "<rect") || strstr(ligne_actuelle, "<circle") || strstr(ligne_actuelle, "<ellipse") || strstr(ligne_actuelle, "<line"))
         {
             ligne++;
 
-            if (strstr(ligne_actual, "<rect"))
+            if (strstr(ligne_actuelle, "<rect"))
             {
                 printf("\nLigne %d contient un rectangle.\n", ligne);
                 formes_rectangle(fichier_sortie);
             }
-            else if (strstr(ligne_actual, "<circle"))
+            else if (strstr(ligne_actuelle, "<circle"))
             {
                 printf("\nLigne %d contient un cercle.\n", ligne);
                 formes_cercle(fichier_sortie);
             }
-            else if (strstr(ligne_actual, "<ellipse"))
+            else if (strstr(ligne_actuelle, "<ellipse"))
             {
                 printf("\nLigne %d contient une ellipse.\n", ligne);
                 formes_ellipse(fichier_sortie);
             }
+            else if (strstr(ligne_actuelle, "<line"))
+            {
+                printf("\nLigne %d contient une ligne.\n", ligne);
+                formes_ligne(fichier_sortie);
+            }
         }
         else
         {
-            fprintf(fichier_sortie, "%s", ligne_actual);
+            fprintf(fichier_sortie, "%s", ligne_actuelle);
         }
     }
 
