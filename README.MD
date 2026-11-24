@@ -8,10 +8,10 @@ Une bibliothèque et un outil en langage C conçus pour créer, éditer et manip
 
 ## Fonctionnalités
 
-- 🔹 **Création de fichiers SVG** : génération de formes de base (rectangles, cercles, lignes, polygones) et gestion des couleurs/styles.
-- 🔹 **Édition** : modification des attributs des éléments existants dans une structure SVG en mémoire.
-- 🔹 **Suppression** : nettoyage ou retrait de formes spécifiques avant l'exportation.
-- 🔹 **Tutoriel intégré** : mode guidé ou exemples d'utilisation pour apprendre à manipuler l'outil rapidement.
+- **Création de fichiers SVG** : génération de formes de base (rectangles, cercles, lignes, polygones) et gestion des couleurs/styles.
+- **Édition** : modification des attributs des éléments existants dans une structure SVG en mémoire.
+- **Suppression** : nettoyage ou retrait de formes spécifiques avant l'exportation.
+- **Tutoriel intégré** : mode guidé ou exemples d'utilisation pour apprendre à manipuler l'outil rapidement.
 
 ## Technologies utilisées
 
